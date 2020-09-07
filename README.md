@@ -6,6 +6,14 @@
 
 mpm install @copy-paste/validate
 
+## Config
+
+```js
+import validate from '@copy-paste/validate'
+
+Vue.use(validate)
+```
+
 ## Usage
 
 ```html

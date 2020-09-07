@@ -1,6 +1,6 @@
 {
     "name": "@copy-paste/validate",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "vue validate",
     "main": "lib/index.js",
     "scripts": {
