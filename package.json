@@ -1,0 +1,26 @@
+{
+  "name": "@copy-paste/validate",
+  "version": "1.0.0",
+  "description": "vue validate",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipat2468/copy-paste-validate.git"
+  },
+  "keywords": [
+    "vue",
+    "validate"
+  ],
+  "author": "test author <pipat_246@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pipat2468/copy-paste-validate/issues"
+  },
+  "homepage": "https://github.com/pipat2468/copy-paste-validate#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.4.4"
+  }
+}
