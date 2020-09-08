@@ -19,8 +19,8 @@ Vue.use(validate)
 ```html
 <template>
     <div>
-        <input v-model="fname" v-rule="rules.fname" style="width: 100%;" />
-        <input v-model="lname" v-rule="rules.lname" style="width: 100%;" />
+        <input v-model="fname" v-rule="rules.fname" />
+        <input v-model="lname" v-rule="rules.lname" />
         <button @click="submit">submit</button>
     </div>
 </template>
@@ -57,6 +57,46 @@ Vue.use(validate)
         }
     }
 </script>
+```
+
+```bash
+# validate only rule
+```
+
+```html
+<input v-model="fname" v-rule="rules.fname" ref="fname" />
+```
+
+```js
+this.$refs.fname.validate()
+```
+
+```bash
+# force error
+```
+
+```html
+<input v-model="fname" v-rule="rules.fname" ref="fname" />
+```
+
+```js
+this.$refs.fname.error('force') //force
+
+this.$refs.fname.error() //un force
+```
+
+```bash
+# add css on element then error
+```
+
+```html
+<input v-model="fname" v-rule="rules.fname" rule-error-css="input-error" />
+```
+
+```css
+.input-error {
+    border: 1px solid red;
+}
 ```
 
 ## 📑 License
