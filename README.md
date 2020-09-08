@@ -86,7 +86,7 @@ this.$refs.fname.error() //un force
 ```
 
 ```bash
-# add css on element then error
+# add css on element when error
 ```
 
 ```html
