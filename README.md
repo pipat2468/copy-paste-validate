@@ -104,12 +104,40 @@ this.$refs.fname.clear()
 </v-rule>
 ```
 
+### multiple element with one rule
+
+```html
+<!-- need key -->
+
+<div v-for="(item, i) in items" :key="i">
+    <input v-rule="rules.empty.options({ key: 'item' + i })" />
+</div>
+```
+
+```js
+export default {
+    data() {
+        return {
+            items: [{ id: 1 }, { id: 2 }],
+            rules: this.$create_rules({
+                empty(el) {
+                    if (!el.value) {
+                        return 'item is require'
+                    }
+                }
+            })
+        }
+    }
+}
+```
+
 ## Options
 
-| name | value  |
-| ---- | ------ |
-| css  | String |
-| ref  | String |
+| name | value          |
+| ---- | -------------- |
+| css  | String         |
+| ref  | String         |
+| key  | String, Number |
 
 ## Events
 
