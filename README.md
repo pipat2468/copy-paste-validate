@@ -113,10 +113,11 @@ this.$refs.fname.clear()
 
 ## Events
 
-| name | params | default |
-| validate | - | undefined |
-| error | String | undefined |
-| clear | - | undefined |
+| name     | params | default   |
+| -------- | ------ | --------- |
+| validate | -      | undefined |
+| error    | String | undefined |
+| clear    | -      | undefined |
 
 ## 📑 License
 
