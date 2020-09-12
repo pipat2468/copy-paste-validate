@@ -59,26 +59,23 @@ Vue.use(validate)
 </script>
 ```
 
-### validate only rule
+### event usage
 
 ```html
 <input v-model="fname" v-rule="rules.fname" ref="fname" />
 ```
 
 ```js
+//validate
 this.$refs.fname.validate()
-```
 
-### force error
-
-```html
-<input v-model="fname" v-rule="rules.fname" ref="fname" />
-```
-
-```js
+//force error
 this.$refs.fname.error('force') //force
 
 this.$refs.fname.error() //un force
+
+//clear
+this.$refs.fname.clear()
 ```
 
 ### add css on element when error
@@ -113,6 +110,13 @@ this.$refs.fname.error() //un force
 | ---- | ------ |
 | css  | String |
 | ref  | String |
+
+## Events
+
+| name | params | default |
+| validate | - | undefined |
+| error | String | undefined |
+| clear | - | undefined |
 
 ## 📑 License
 
