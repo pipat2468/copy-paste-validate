@@ -4,7 +4,7 @@
 
 ## Development
 
-mpm install @copy-paste/validate
+npm install @copy-paste/validate
 
 ## Config
 
@@ -90,7 +90,7 @@ this.$refs.fname.error() //un force
 ```
 
 ```html
-<input v-model="fname" v-rule="rules.fname" rule-error-css="input-error" />
+<input v-model="fname" v-rule="rules.fname.options({ css: 'input-error' })" />
 ```
 
 ```css
@@ -98,6 +98,29 @@ this.$refs.fname.error() //un force
     border: 1px solid red;
 }
 ```
+
+```bash
+# custom error
+```
+
+```html
+<input v-model="fname" v-rule="rules.fname.options({ ref: 'err' })" />
+<v-rule ref="err" style="color: red;" />
+
+<!-- or -->
+
+<input v-model="fname" v-rule="rules.fname.options({ ref: 'err' })" />
+<v-rule ref="err" style="color: red;">
+    <template #default="e"> Error: {{e.error}} </template>
+</v-rule>
+```
+
+## Options
+
+| name | value  |
+| ---- | ------ |
+| css  | String |
+| ref  | String |
 
 ## 📑 License
 
