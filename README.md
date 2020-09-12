@@ -32,7 +32,7 @@ Vue.use(validate)
                 fname: '',
                 lname: '',
                 rules: this.$rules({
-                    fname(el) {
+                    fname({ el }) {
                         if (!el.value) {
                             return 'fname is require'
                         }
@@ -40,7 +40,7 @@ Vue.use(validate)
                             return 'duplicate fname'
                         }
                     },
-                    lname(el) {
+                    lname({ el }) {
                         if (!el.value) {
                             return 'lname is require'
                         }
@@ -120,9 +120,9 @@ export default {
         return {
             items: [{ id: 1 }, { id: 2 }],
             rules: this.$rules({
-                empty(el) {
+                empty({ el, options }) {
                     if (!el.value) {
-                        return 'item is require'
+                        return `${options.key} is require`
                     }
                 }
             })
