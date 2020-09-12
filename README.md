@@ -31,7 +31,7 @@ Vue.use(validate)
             return {
                 fname: '',
                 lname: '',
-                rules: this.$create_rules({
+                rules: this.$rules({
                     fname(el) {
                         if (!el.value) {
                             return 'fname is require'
@@ -119,7 +119,7 @@ export default {
     data() {
         return {
             items: [{ id: 1 }, { id: 2 }],
-            rules: this.$create_rules({
+            rules: this.$rules({
                 empty(el) {
                     if (!el.value) {
                         return 'item is require'
