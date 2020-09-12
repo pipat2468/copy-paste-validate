@@ -59,9 +59,7 @@ Vue.use(validate)
 </script>
 ```
 
-```bash
 # validate only rule
-```
 
 ```html
 <input v-model="fname" v-rule="rules.fname" ref="fname" />
@@ -71,9 +69,7 @@ Vue.use(validate)
 this.$refs.fname.validate()
 ```
 
-```bash
 # force error
-```
 
 ```html
 <input v-model="fname" v-rule="rules.fname" ref="fname" />
@@ -85,9 +81,7 @@ this.$refs.fname.error('force') //force
 this.$refs.fname.error() //un force
 ```
 
-```bash
 # add css on element when error
-```
 
 ```html
 <input v-model="fname" v-rule="rules.fname.options({ css: 'input-error' })" />
@@ -99,9 +93,7 @@ this.$refs.fname.error() //un force
 }
 ```
 
-```bash
 # custom error
-```
 
 ```html
 <input v-model="fname" v-rule="rules.fname.options({ ref: 'err' })" />
