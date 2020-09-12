@@ -12,6 +12,11 @@ npm install @copy-paste/validate
 import validate from '@copy-paste/validate'
 
 Vue.use(validate)
+
+//validate inline
+Vue.use(validate, {
+    inline: true
+})
 ```
 
 ## Usage

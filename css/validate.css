@@ -1,52 +1,72 @@
 .copy-paste--validate {
-  display: none;
-  background: #ff2f00;
-  color: #fff;
-  padding: 1px 5px;
-  border-radius: 5px;
-  font-size: 12px;
+    display: none;
+    background: #ff2f00;
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 2px 8px;
 }
 
-.copy-paste--validate[data-show] {
-  display: block;
+.copy-paste--validate-inline {
+    display: none;
+    color: red;
+    padding: 1px 5px;
+    font-size: 14px;
+    padding: 2px 0;
 }
 
-.copy-paste--validate[data-popper-placement^="top"] > .data-popper-arrow {
-  bottom: -1px;
-  width: 4px;
-  height: 4px;
-  z-index: -1;
+.copy-paste--validate[data-show],
+.copy-paste--validate-inline[data-show] {
+    display: flex;
+    align-items: center;
 }
 
-.copy-paste--validate[data-popper-placement^="bottom"] > .data-popper-arrow {
-  top: -1px;
-  width: 4px;
-  height: 4px;
-  z-index: -1;
+.icon-error-rule {
+    width: 16px;
+    margin: 0px 5px 0px 2px;
 }
 
-.copy-paste--validate[data-popper-placement^="left"] > .data-popper-arrow {
-  right: -1px;
-  width: 4px;
-  height: 4px;
-  z-index: -1;
+.copy-paste--validate[data-popper-placement^='top'] > .data-popper-arrow,
+.copy-paste--validate-inline[data-popper-placement^='top'] > .data-popper-arrow {
+    bottom: -1px;
+    width: 4px;
+    height: 4px;
+    z-index: -1;
 }
 
-.copy-paste--validate[data-popper-placement^="right"] > .data-popper-arrow {
-  left: -1px;
-  width: 4px;
-  height: 4px;
-  z-index: -1;
+.copy-paste--validate[data-popper-placement^='bottom'] > .data-popper-arrow,
+.copy-paste--validate-inline[data-popper-placement^='bottom'] > .data-popper-arrow {
+    top: -1px;
+    width: 4px;
+    height: 4px;
+    z-index: -1;
+}
+
+.copy-paste--validate[data-popper-placement^='left'] > .data-popper-arrow,
+.copy-paste--validate-inline[data-popper-placement^='left'] > .data-popper-arrow {
+    right: -1px;
+    width: 4px;
+    height: 4px;
+    z-index: -1;
+}
+
+.copy-paste--validate[data-popper-placement^='right'] > .data-popper-arrow,
+.copy-paste--validate-inline[data-popper-placement^='right'] > .data-popper-arrow {
+    left: -1px;
+    width: 4px;
+    height: 4px;
+    z-index: -1;
 }
 
 .data-popper-arrow::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  position: absolute;
-  background: #ff2f00;
-  visibility: visible;
-  transform: translateX(0px) rotate(45deg);
-  transform-origin: center center;
-  transition: transform 0.2s ease-out 0s, visibility 0.2s ease-out 0s;
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    background: #ff2f00;
+    visibility: visible;
+    transform: translateX(0px) rotate(45deg);
+    transform-origin: center center;
+    transition: transform 0.2s ease-out 0s, visibility 0.2s ease-out 0s;
 }
