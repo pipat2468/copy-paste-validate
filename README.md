@@ -104,9 +104,20 @@ this.$refs.fname.clear()
 <!-- or -->
 
 <input v-model="fname" v-rule="rules.fname.options({ ref: 'err' })" />
-<v-rule ref="err" style="color: red;">
-    <template #default="e"> Error: {{e.error}} </template>
+<v-rule ref="err" class="error-custom">
+    <template #default="e">
+        <v-rule-icon inline width="16" style="margin-right: 5px;" /> {{e.error}}
+    </template>
 </v-rule>
+```
+
+```css
+.error-custom {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 ```
 
 ### multiple element with one rule
