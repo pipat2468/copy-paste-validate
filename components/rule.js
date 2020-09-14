@@ -15,9 +15,6 @@ export default {
             const sdf = this.$scopedSlots.default
             return c(
                 this.$parent.tag,
-                {
-                    on: this.$parent.$listeners
-                },
                 sdf
                     ? [
                           sdf({
