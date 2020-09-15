@@ -128,7 +128,7 @@ this.$refs.fname.clear()
 <!-- need key -->
 
 <div v-for="(item, i) in items" :key="i">
-    <input v-rule="rules.empty.options({ key: 'item' + i })" />
+    <input v-rule="rules.empty" :key="'item' + i" />
 </div>
 ```
 
