@@ -149,15 +149,67 @@ export default {
 }
 ```
 
-## Options
+### watch
+
+```js
+export default {
+    data() {
+        return {
+            fname: '',
+            lname: '',
+            lang: 'th',
+            rules: this.$rules(
+                {
+                    fname({ el }) {
+                        if (!el.value) {
+                            return 'fname is require'
+                        }
+                        if (el.value == 'ss') {
+                            return 'duplicate fname'
+                        }
+                    },
+                    lname({ el }) {
+                        if (!el.value) {
+                            return 'lname is require'
+                        }
+                    }
+                },
+                {
+                    watch: 'lang' //When lang is changed, rules will be validate.
+                }
+            )
+        }
+    }
+}
+```
+
+## element
 
 | name | value          |
 | ---- | -------------- |
-| css  | String         |
-| ref  | String         |
 | key  | String, Number |
 
-## Events
+## Options rules
+
+| name  | value              |
+| ----- | ------------------ |
+| watch | String or Function |
+
+## Events rules
+
+| name     | params | default   |
+| -------- | ------ | --------- |
+| validate | -      | undefined |
+| clear    | -      | undefined |
+
+## Options rule
+
+| name | value  |
+| ---- | ------ |
+| css  | String |
+| ref  | String |
+
+## Events rule
 
 | name     | params | default   |
 | -------- | ------ | --------- |
